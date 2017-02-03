@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.2
+Created-By: 1.6.0_45-b06 (Sun Microsystems Inc.)
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: spec4j.core
+Bundle-Version: 1.0.0.b848
+Bundle-Vendor: %Bundle-Vendor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Premain-Class: spec4j.core.Agent
+Agent-Class: spec4j.core.Agent
+Main-Class: spec4j.core.Agent
+Can-Redefine-Classes: True
+Can-Retransform-Classes: True
