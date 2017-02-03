@@ -1,6 +1,9 @@
-/bin/
-.project
-/target/
-.DS_Store
+# Eclipse-related
 .classpath
-/.settings/
+.project
+.factorypath
+# Build
+target/
+settings/
+
+.DS_Store
