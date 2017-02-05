@@ -4,6 +4,6 @@
 .factorypath
 # Build
 target/
-settings/
+.settings/
 
 .DS_Store
