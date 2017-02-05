@@ -1,4 +1,4 @@
-package spec4j.core;
+package spec4j.injector;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,12 +9,11 @@ import com.sun.tools.attach.AgentLoadException;
 import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
 
-import spec4j.core.env.InitConsts;
-import spec4j.core.util.QuietlyUtils;
-
 public class AgentInstaller {
 
-  public static void attach() {
+  public static final String CORE_JAR_NAME = "spec4j-core.jar";
+
+  public static void main(String[] args) {
 
     String iString = null;
 
@@ -61,7 +60,7 @@ public class AgentInstaller {
     VirtualMachine vm = VirtualMachine.attach(pid);
 
     vm.loadAgent(
-        new File(InitConsts.CORE_JAR_NAME).getAbsolutePath(),
+        new File(CORE_JAR_NAME).getAbsolutePath(),
         null);
 
   }

@@ -1,0 +1,2 @@
+Agent-Class: spec4j.core.Agent
+Main-Class: spec4j.injector.AgentInstaller
