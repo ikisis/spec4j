@@ -42,8 +42,11 @@ public class AgentInstaller {
       System.out.print("trying to attach [pid: " + pid + "] ..");
 
       try {
+
         attach(pid);
+
         System.out.println("[Done]");
+
       } catch (Throwable ignored) {
 
         ignored.printStackTrace();
