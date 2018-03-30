@@ -1,5 +1,6 @@
 package spec4j.core.util;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
 
@@ -25,6 +26,27 @@ public class QuietlyUtilsTest {
     QuietlyUtils.close(is);
 
     is.read();
+
+  }
+
+  @Test
+  public void test_no_Closeable() {
+
+    NoCloseable nc = new NoCloseable();
+
+    QuietlyUtils.close(nc);
+
+    assertThat(nc.closed, equalTo(true));
+
+  }
+
+  static class NoCloseable {
+
+    public boolean closed = false;
+
+    public void close() {
+      closed = true;
+    }
 
   }
 }
