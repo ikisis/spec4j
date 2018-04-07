@@ -20,7 +20,17 @@ public abstract class PathUtils {
 
         String[] tokens = fullPath.split("[:]");
 
-        tokens = tokens[1].replace('\\', '/').split("[/]");
+        int tokenIndex = 0;
+
+        if (tokens.length < 1) {
+          // TODO exceptions
+        }
+
+        if (tokens.length > 1 && (tokens[1].startsWith("/") || tokens[1].startsWith("\\"))) {
+          tokenIndex = 1;
+        }
+
+        tokens = tokens[tokenIndex].replace('\\', '/').split("[/]");
 
         StringBuilder sb = new StringBuilder();
 
